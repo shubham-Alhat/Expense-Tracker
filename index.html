@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body class="h-screen w-screen bg-black flex justify-center items-center">
+    <main>
+      <!-- main container -->
+      <div
+        id="main_container"
+        class="w-96 p-4 text-center text-slate-200 border-[1px] border-white border-solid flex flex-col gap-2"
+      >
+        <!-- first element in main container i.e HEADING -->
+        <h1 class="text-3xl font-bold">Expense Tracker</h1>
+
+        <!-- second element in main container i.e FORM ELEMENT-->
+        <form action="#">
+          <!-- input tag to enter Expense Name -->
+          <input
+            id="namebox"
+            type="text"
+            placeholder="Expense name"
+            class="h-10 w-32 pl-4 bg-slate-800 rounded-md m-1 outline-none"
+            required
+          />
+          <!-- input tag to enter Amount of Expense -->
+          <input
+            id="amountbox"
+            type="number"
+            min="0"
+            placeholder="Amount"
+            class="h-10 w-32 pl-5 bg-slate-800 rounded-md m-1 outline-none"
+            required
+          />
+          <!-- Button to add in Expense List -->
+          <button
+            type="submit"
+            class="bg-slate-100 text-black font-semibold w-28 h-10 rounded-md m-1"
+          >
+            Add Expense
+          </button>
+        </form>
+
+        <!-- 3rd element i.e HEADING -->
+        <h1 class="text-3xl font-bold">Expenses</h1>
+
+        <!-- div for containing all expenses -->
+        <div id="expense-box-container" class="w-full flex flex-col gap-2">
+          <!-- the inner divs will be created dynamically in js -->
+
+          <!--Expense-Box-Container ENDS HERE  -->
+        </div>
+
+        <!-- Here Total Amount Box -->
+        <p id="total-box" class="text-xl font-semibold"></p>
+
+        <!-- all elements ends here -->
+
+        <!-- Here main container ENDS... -->
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
